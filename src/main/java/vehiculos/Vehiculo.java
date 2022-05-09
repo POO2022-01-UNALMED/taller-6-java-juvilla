@@ -12,79 +12,79 @@ public class Vehiculo {
 	private Fabricante fabricante;
 	static int CantidadVehiculos;
 	public static ArrayList<Pais> paises = new ArrayList<Pais>();
-	Vehiculo(){
+	public Vehiculo(){
 		CantidadVehiculos++;
 		listado.add(this);
 	}
-	String getPlaca(){
+	public String getPlaca(){
 		return placa;
 	}
-	void setPlaca(String placa) {
+	public void setPlaca(String placa) {
 		this.placa=placa;
 	}
-	int getPuertas(){
+	public int getPuertas(){
 		return puertas;
 	}
-	void setPuertas(int puertas) {
+	public void setPuertas(int puertas) {
 		this.puertas=puertas;
 	}
-	int getVelocidadMaxima(){
+	public int getVelocidadMaxima(){
 		return velocidadMaxima;
 	}
-	void setVelocidadMaxima(int velocidadMaxima) {
+	public void setVelocidadMaxima(int velocidadMaxima) {
 		this.velocidadMaxima=velocidadMaxima;
 	}
-	String getNombre(){
+	public String getNombre(){
 		return nombre;
 	}
-	void setNombre(String nombre) {
+	public void setNombre(String nombre) {
 		this.nombre=nombre;
 	}
-	int getPrecio(){
+	public int getPrecio(){
 		return precio;
 	}
-	void setPrecio(int precio) {
+	public void setPrecio(int precio) {
 		this.precio=precio;
 	}
-	int getPeso(){
+	public int getPeso(){
 		return peso;
 	}
-	void setPeso(int peso) {
+	public void setPeso(int peso) {
 		this.peso=peso;
 	}
-	String getTraccion(){
+	public String getTraccion(){
 		return traccion;
 	}
-	void setTraccion(String traccion) {
+	public void setTraccion(String traccion) {
 		this.traccion=traccion;
 	}
-	Fabricante getFabricante(){
+	public Fabricante getFabricante(){
 		return fabricante;
 	}
-	void setFabricante(Fabricante fabricante) {
+	public void setFabricante(Fabricante fabricante) {
 		this.fabricante=fabricante;
 	}
-	int getCantidadVehiculos() {
+	public int getCantidadVehiculos() {
 		return CantidadVehiculos;
 	}
-	void setCantidadVehiculos(int CV) {
+	public void setCantidadVehiculos(int CV) {
 		CantidadVehiculos=CV;
 	}
-	static void vehiculosPorTipo() {
+	public static void vehiculosPorTipo() {
 		System.out.println("Automoviles: "+Automovil.CantidadAutomovil+"\nCamionetas: "+Camioneta.CantidadCamioneta+"\nCamiones: "+Camion.CantidadCamion);
 	}
-	static void PaisMasVendedor() {
+	public static void PaisMasVendedor() {
 		for (int i=0;i<listado.size();i++) {
 			Fabricante a=listado.get(i).getFabricante();
 			listado.get(i).getFabricante();
 		}
 	}
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		Fabricante b=new Fabricante();
 		Automovil a=new Automovil("aaaaaaaaa","aaaaaaaaaaa",1,1,b,12);
 		Automovil C=new Automovil("aaaaaaaaa","aaaaaaaaaaa",1,1,b,12);
 		Camioneta D=new Camioneta("a",1,"a",1,1,b,true);
 		Vehiculo.vehiculosPorTipo();
 		Vehiculo.PaisMasVendedor();
-	}
+	}*/
 }

@@ -3,7 +3,7 @@ package vehiculos;
 public class Camioneta extends Vehiculo {
 	private boolean volco;
 	public static int CantidadCamioneta;
-	Camioneta(String placa,int puertas,String nombre,int precio,int peso,Fabricante fabricante,boolean volco){
+	public Camioneta(String placa,int puertas,String nombre,int precio,int peso,Fabricante fabricante,boolean volco){
 		super();
 		setPlaca(placa);
 		setPuertas(puertas);
@@ -16,13 +16,13 @@ public class Camioneta extends Vehiculo {
 		setVolco(volco);
 		CantidadCamioneta++;
 	}
-	boolean isVolco() {
+	public boolean isVolco() {
 		return volco;
 	}
-	void setVolco(boolean volco) {
+	public void setVolco(boolean volco) {
 		this.volco=volco;
 	}
-	int getCantidadCamioneta() {
+	public int getCantidadCamioneta() {
 		return CantidadCamioneta;
 	}
 
