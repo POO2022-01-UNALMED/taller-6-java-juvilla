@@ -12,7 +12,9 @@ public class Vehiculo {
 	private Fabricante fabricante;
 	public static int CantidadVehiculos;
 	public static ArrayList<Pais> paises = new ArrayList<Pais>();
-	public Vehiculo(){
+	public Vehiculo(String placa,int puertas,int velocidadMaxima,String nombre,int precio,int peso,String traccion,Fabricante fabricante){
+		this.setPlaca(placa);
+		
 		CantidadVehiculos++;
 		listado.add(this);
 	}
