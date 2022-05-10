@@ -1,6 +1,5 @@
 package vehiculos;
 import java.util.ArrayList;
-import java.util.Collections;
 public class Vehiculo {
 	public static ArrayList<Vehiculo> listado = new ArrayList<Vehiculo>();
 	private String placa;
@@ -81,57 +80,6 @@ public class Vehiculo {
 	}
 	public static void vehiculosPorTipo() {
 		System.out.println("Automoviles: "+Automovil.CantidadAutomovil+"\nCamionetas: "+Camioneta.CantidadCamioneta+"\nCamiones: "+Camion.CantidadCamion);
-	}
-	public static Pais PaisMasVendedor() {
-		ArrayList<Pais> paises = new ArrayList<Pais>();
-		ArrayList<Integer> cantporPais = new ArrayList<Integer>();
-		for (int i=0;i<listado.size();i++) {
-			Pais a=listado.get(i).getFabricante().getPais();
-			if (!paises.contains(a)) {
-				paises.add(a);
-				int vi=0;
-				for (int t=0;t<listado.size();t++) { 
-					Pais c=listado.get(t).getFabricante().getPais();
-					if(c.equals(a)) {
-						vi++;
-					}
-				}
-				cantporPais.add(vi);
-			}
-		}
-		Integer maximo = Collections.max(cantporPais); //maximo numero de veces que se repite un pais
-		for (int g=0;g<cantporPais.size();g++) {
-			if(cantporPais.get(g)==maximo) {
-				return paises.get(g);
-			}
-		}
-		return null;
-	}
-	public static Fabricante fabricaMayorVentas() {
-		ArrayList<Fabricante> fabricantes = new ArrayList<Fabricante>();
-		ArrayList<Integer> cantporfab = new ArrayList<Integer>();
-		for (int l=0;l<listado.size();l++) {
-			Fabricante f=listado.get(l).getFabricante();
-			if (!fabricantes.contains(f)) {
-				fabricantes.add(f);
-				int ci=0;
-				for (int t=0;t<listado.size();t++) { 
-					Fabricante d=listado.get(t).getFabricante();
-					if(d.equals(f)) {
-						ci++;
-					}
-				}
-				cantporfab.add(ci);
-			}
-		}
-		Integer maximo = Collections.max(cantporfab); //maximo numero de veces que se repite un fabricante
-		for (int j=0;j<cantporfab.size();j++) {
-			if(cantporfab.get(j)==maximo) {
-				return fabricantes.get(j);
-			}
-		}
-		return null;
-		
 	}
 	public static void main(String[] args) {
 		Pais p=new Pais("a");
