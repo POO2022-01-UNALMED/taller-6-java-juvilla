@@ -82,55 +82,19 @@ public class Vehiculo {
 	public static void vehiculosPorTipo() {
 		System.out.println("Automoviles: "+Automovil.CantidadAutomovil+"\nCamionetas: "+Camioneta.CantidadCamioneta+"\nCamiones: "+Camion.CantidadCamion);
 	}
-	public static Fabricante fabricaMayorVentas() {
-		ArrayList<Fabricante> fabricantes = new ArrayList<Fabricante>();
-		ArrayList<Integer> cantporfab = new ArrayList<Integer>();
-		for (int l=0;l<listado.size();l++) {
-			Fabricante f=listado.get(l).getFabricante();
-			if (!fabricantes.contains(f)) {
-				fabricantes.add(f);
-				int ci=0;
-				for (int t=0;t<listado.size();t++) { 
-					Fabricante d=listado.get(t).getFabricante();
-					if(d.equals(f)) {
-						ci++;
-					}
-				}
-				cantporfab.add(ci);
-			}
-		}
-		Integer maximo = Collections.max(cantporfab); //maximo numero de veces que se repite un fabricante
-		for (int j=0;j<cantporfab.size();j++) {
-			if(cantporfab.get(j)==maximo) {
-				return fabricantes.get(j);
-			}
-		}
-		return null;
-		
-	}
-	public static Pais PaisMasVendedor() {
-		ArrayList<Pais> paises = new ArrayList<Pais>();
-		ArrayList<Integer> cantporPais = new ArrayList<Integer>();
-		for (int i=0;i<listado.size();i++) {
-			Pais a=listado.get(i).getFabricante().getPais();
-			if (!paises.contains(a)) {
-				paises.add(a);
-				int vi=0;
-				for (int t=0;t<listado.size();t++) { 
-					Pais c=listado.get(t).getFabricante().getPais();
-					if(c.equals(a)) {
-						vi++;
-					}
-				}
-				cantporPais.add(vi);
-			}
-		}
-		Integer maximo = Collections.max(cantporPais); //maximo numero de veces que se repite un pais
-		for (int g=0;g<cantporPais.size();g++) {
-			if(cantporPais.get(g)==maximo) {
-				return paises.get(g);
-			}
-		}
-		return null;
+	public static void main(String[] Args) {
+		Pais p=new Pais("cololo");
+		Pais c=new Pais("Peru");
+		Pais d=new Pais("Frencia");
+		Fabricante t=new Fabricante("j",p);
+		Fabricante t2=new Fabricante("y",c);
+		Fabricante t3=new Fabricante("asda",d);
+		Automovil c1=new Automovil("a","a",1,1,t,3);
+		Automovil c2=new Automovil("a","a",1,1,t,3);
+		Automovil c3=new Automovil("a","a",1,1,t3,3);
+		Automovil c4=new Automovil("a","a",1,1,t3,3);
+		Automovil c5=new Automovil("a","a",1,1,t3,3);
+		Automovil c6=new Automovil("a","a",1,1,t3,3);
+		System.out.print(Pais.PaisMasVendedor().getNombre());
 	}
 }

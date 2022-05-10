@@ -14,7 +14,7 @@ public class Pais {
 	public void setNombre(String nombre) {
 		this.nombre=nombre;
 	}
-	public static Pais PaisMasVendedor() {
+	public static Pais paisMasVendedor() {
 		ArrayList<Pais> paises = new ArrayList<Pais>();
 		ArrayList<Integer> cantporPais = new ArrayList<Integer>();
 		for (int i=0;i<Vehiculo.listado.size();i++) {
