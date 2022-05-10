@@ -82,19 +82,4 @@ public class Vehiculo {
 	public static void vehiculosPorTipo() {
 		System.out.println("Automoviles: "+Automovil.CantidadAutomovil+"\nCamionetas: "+Camioneta.CantidadCamioneta+"\nCamiones: "+Camion.CantidadCamion);
 	}
-	public static void main(String[] Args) {
-		Pais p=new Pais("cololo");
-		Pais c=new Pais("Peru");
-		Pais d=new Pais("Frencia");
-		Fabricante t=new Fabricante("j",p);
-		Fabricante t2=new Fabricante("y",c);
-		Fabricante t3=new Fabricante("asda",d);
-		Automovil c1=new Automovil("a","a",1,1,t,3);
-		Automovil c2=new Automovil("a","a",1,1,t,3);
-		Automovil c3=new Automovil("a","a",1,1,t3,3);
-		Automovil c4=new Automovil("a","a",1,1,t3,3);
-		Automovil c5=new Automovil("a","a",1,1,t3,3);
-		Automovil c6=new Automovil("a","a",1,1,t3,3);
-		System.out.print(Pais.PaisMasVendedor().getNombre());
-	}
 }
